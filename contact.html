@@ -32,16 +32,15 @@ http://www.tooplate.com/view/2094-mason
             <div class="tm-sidebar">
                 <section id="welcome" class="tm-content-box tm-banner margin-b-15">
                     <div class="tm-banner-inner">
-                        <i class="fa fa-film fa-4x margin-b-40"></i>
-                        <h1 class="tm-banner-title">AC/Dc</h1>
-                        <p class="tm-banner-subtitle">From fans to fans</p>                   
-                    </div>                   
+                        <img src="img/0.png">
+                        <p class="tm-banner-subtitle"><br>From fans to fans</p>
+                    </div>                  
                 </section>
                 <nav class="tm-main-nav">
                     <ul class="tm-main-nav-ul">
                         <li class="tm-nav-item"><a href="timeline.html" class="tm-nav-item-link tm-button">Timeline</a>
                         </li>
-                        <li class="tm-nav-item"><a href="index.html" class="tm-nav-item-link tm-button active">Lyrics</a>
+                        <li class="tm-nav-item"><a href="index.html" class="tm-nav-item-link tm-button active">Homepage</a>
                         </li>
                         <li class="tm-nav-item"><a href="about.html" class="tm-nav-item-link tm-button">Look for</a>
                         </li>
@@ -74,21 +73,23 @@ http://www.tooplate.com/view/2094-mason
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                             <div class="tm-address-box">
-                                <p>Morbi auctor euismod dictum. Morbi eu nibh in nulla interdum placerat. Donec pellentesque est at sem aliquam hendrerit.</p>                                    
+                                <p>Hey there! We're UAM's students who're doing theirs<br> HCI project.</p>                                    
                                 <address>
-                                    <span class="tm-blue-text">Mailing Address</span><br>
-                                    991 Curabitur molestie dui vel,<br>
-                                    metus iaculis suscipit 11900<br><br>
-                                    Email: <a class="tm-blue-text" href="mailto:info@company.com">info@company.com</a><br>
-                                    Tel: <a class="tm-black-text" href="tel:010-020-0120">010-020-0120</a><br>
-                                    Fax: <a class="tm-black-text" href="tel:090-080-0980">090-080-0980</a><br>
+                                    <span class="tm-blue-text">Find us:</span><br>
+                                    AMU Faculty of Social Sciences<br>
+                                    Szamarzewskiego 89,<br>
+                                    60-568 Poznań<br><br>
+                                    Email us:<br>
+                                     <a class="tm-blue-text" href="nat.kawecka@gmail.com">nat.kawecka@gmail.com</a><br>
+                                    <a class="tm-blue-text" href="m.gajdziszewski16@gmail.com">m.gajdziszewski16@gmail.com</a><br>
+                                    
                                 </address>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <div id="google-map"></div>        
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2433.571325039033!2d16.881614315855888!3d52.41444497979431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8af857d177acabf7!2sAMU%20Faculty%20of%20Social%20Sciences!5e0!3m2!1sen!2spl!4v1573494183230!5m2!1sen!2spl" width="1000" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>         
                         </div>
                     </div>
                 </section>
@@ -104,50 +105,6 @@ http://www.tooplate.com/view/2094-mason
 
     <!-- load JS files -->
     <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
-    <script>  
 
-        /* Google map
-        ------------------------------------------------*/
-        var map = '';
-        var center;
-
-        function initialize() {
-            var mapOptions = {
-                zoom: 16,
-                center: new google.maps.LatLng(37.769725, -122.462154),
-                scrollwheel: false
-            };
-
-            map = new google.maps.Map(document.getElementById('google-map'),  mapOptions);
-
-            google.maps.event.addDomListener(map, 'idle', function() {
-              calculateCenter();
-          });
-
-            google.maps.event.addDomListener(window, 'resize', function() {
-              map.setCenter(center);
-          });
-        }
-
-        function calculateCenter() {
-            center = map.getCenter();
-        }
-
-        function loadGoogleMap(){
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDVWt4rJfibfsEDvcuaChUaZRS5NXey1Cs&v=3.exp&sensor=false&' + 'callback=initialize';
-            document.body.appendChild(script);
-        } 
-
-        $(document).ready(function(){           
-
-            // Google Map
-            loadGoogleMap();    
-
-            // Update the current year in copyright
-            $('.tm-current-year').text(new Date().getFullYear());        
-        });
-    </script>
 </body>
 </html>
