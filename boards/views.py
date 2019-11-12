@@ -22,5 +22,5 @@ def contact(request):
 
 def timeline(request):
     print('Timeline')
-    return render(request, 'templates/contact.html')
+    return render(request, 'templates/timeline.html')
 
